@@ -136,7 +136,7 @@ section {
 }
 
 #home {
-  background: url(/Users/stellar/Desktop/Basic_HTML_and_CSS/project/images/planets.jpg) no-repeat 50% 50%;
+  background: url(./images/planets.jpg) no-repeat 50% 50%;
   background-attachment: fixed;
   -webkitback-background-size: cover;
   -moz-background-size: cover;
