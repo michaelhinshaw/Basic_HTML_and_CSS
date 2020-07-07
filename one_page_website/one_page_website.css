@@ -1,0 +1,15 @@
+body {
+  font-family: monospace;
+  font-size: 1.25;
+}
+
+input[type=text] {
+  width: 60%;
+  padding: 6px 6px;
+  margin: 8px;
+  border-style: outset;
+  border-color: 2px solid white;
+  border-radius: 50px 20px;
+
+}
+
