@@ -1,0 +1,87 @@
+/* Body */
+body {
+  margin: 0%; /* ensures the site displays to the edge of the browser */
+}
+
+/* Navbar */
+.Navbar {
+  overflow: hidden; /* ensures that any content beyond the boundary is not displayed */
+  background-color: black;
+  position: fixed; /* keeps navbar at the top of the screen */
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+/* Navbar text */
+.Navbar a {
+  float: left; /* text floats on the left on the navbar */
+  display: block; 
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: Avant-Garde, Helvetica;
+  font-size: 20px;
+  text-align: center;
+}
+
+/* Navbar hover effect */
+.Navbar a:hover {
+  background-color: #f4f4f4;
+  color: black;
+  font-weight: bold;
+}
+
+/* Navbar home button */
+.Navbar a.active  { /* active selector styles a link */
+  background-color: darkgray;
+
+}
+
+/* Video */
+#My_Video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  z-index: -1;
+}
+
+.Video_Text {
+  background: rgba(0,0,0,0.5);
+  color: white;
+  width: 100%;
+  padding: 20px;
+  margin-top: 23%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.Column_1 {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  padding-top: 3%;
+  height: 400px;
+  background-color: #f2f2f2;
+}
+
+.Column_2 {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  padding-top: 1.9%;
+  height: 400px;
+  background-color: #4d4d4d;
+}
+
+.Column_3 {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  padding-top: 3.5%;
+  height: 450px;
+  background-color: #4d4d4d;
+}
