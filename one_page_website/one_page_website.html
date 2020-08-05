@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Algorithmic Composition</title>
+  <script src ="JS/one_page_website.js" defer></script>
   <link rel="stylesheet" type="text/css" href="one_page_website.css">
 </head>
 <body>
@@ -14,7 +15,7 @@
       <ul>
         <a href="#Home" id="link"><li>Home</li></a>
         <a href="#types" id="link"><li>Disciplines</li></a>
-        <a href="#contact" id=><li>Contact</li></a>
+        <a href="#contact" id="link"><li>Contact</li></a>
       </ul>
     </div>
   </div>  
@@ -34,99 +35,86 @@
   <!-- End Home -->
 
   <!-- Disciplines -->
-  <section>
-    <div id="types">
-      <h2>An Array of Options: [Coding Music]</h2>
-      <div>
-
-        <!-- photo container -->
-        <div>
-          <div>
-            <img src="./images/supercollider_2.jpeg" alt="Supercollider Sound Design">
-              <div>
-                <h3>Click</h3>
-                <p>SuperCollider is a sound design engine for coders.  It has a server and an IDE.
-                  <br>The program has unlimited potential for sound design, 
-                  <br>But the language can be a bit esoteric.
-                </p>
-
-              </div>
-          </div>
-        </div>
-        <!-- End of Photo Container -->
-
-        <!-- photo container -->
-        <div>
-          <div>
-            <img src="./images/tidalcycles.jpeg" alt="tidalcycles live coding">
-            <div>
-              <h3>Click</h3>
-              <p>TidalCycles is the newest in a long line of Algorithmic
-                <br>composition programs to gain a wider following.
-                <br>Here you code and compositions that are function based,
-                <br>and can be changed in real time.  It has a strong link to math.
-              </p>
-
-            </div>
-          </div>
-        </div>
-        <!-- End of Photo Container -->
-
-        <!-- photo container -->
-        <div>
-          <div>
-            <img src="./images/extempore.jpeg" alt="extempore live music and visuals">
-            <div>
-              <h3>Click</h3>
-              <p>Extempore is a very popular engine for coding music, 
-                <br>it also has a very good capability for generating 
-                <br>coded graphics in real time.
-              </p>
-
-            </div>
-          </div>
-        </div>
-        <!-- End of Photo Container -->
-
-        <!-- photo container -->
-        <div>
-          <div>
-            <img src="./images/Max8.png" alt="visual coding language">
-            <div>
-              <h3>Click</h3>
-              <p>Max/MSP/Jitter is a visual coding language where coders connect
-                <br>blocks of underlying code together in a modular pattern to 
-                <br>create programs that are flexible to a users needs and creativity
-              </p>
-
-            </div>
-          </div>
-        </div>
-        <!-- End of Photo Container -->
-
-        <!-- photo container -->
-        <div>
-          <div>
-            <img src="./images/puredata.jpeg" alt="patchable programming language">
-            <div>
-              <h3>Pure Data</h3>
-              <p>Pure Data is very similar to Max in the way that users patch together
-                <br>blocks of code.  Pure Data is open-source so users can add features.
-                <br>It is also Free, unlike Max.  Max is better, by the way.
-              </p>
-
-            </div>
-          </div>
-        </div>
-        <!-- End of Photo Container -->
-
-
-
-
-      </div>
+  <div class="row">
+    <div class="column">
+      <img src="images/supercollider_2.jpeg" onclick="openModal();currentSlide(1)" class="hover-shadow">
     </div>
-  </section>
+     <div class="column">
+       <img src="images/tidalcycles.jpeg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+     </div>
+     <div class="column">
+       <img src="images/extempore.jpeg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+     </div>
+     <div class="column">
+        <img src="images/Max8.png" onclick="openModal();currentSlide(4)" class="hover-shadow">
+     </div>
+     <div class="column">
+       <img src="images/puredata.jpeg" onclick="openModal();currentSlide(5)" class="hover-shadow">
+     </div>    
+  </div>
 
+
+  <!-- lightbox -->
+  <div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 5</div>
+      <img src= "images/supercollider_2.jpeg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 5</div>
+      <img src="images/tidalcycles.jpeg" style="width: 100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 5</div>
+      <img src="images/extempore.jpeg" style="width: 100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">4 / 5</div>
+      <img src="images/max8.png" style="width: 100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">5 / 5</div>
+      <img src="images/puredata.jpeg" style="width: 100%">
+    </div>
+
+    <!-- next previous controls -->    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <!-- Caption text -->
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+    <!-- thumbnail controls-->
+    <div class="column">
+        <img class="demo" src="images/supercollider_2.jpeg" onclick="currentSlide(1)" alt="Supercollider">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="images/tidalcycles.jpeg" onclick="currentSlide(1)" alt="tidalcycles">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="images/extempore.jpeg" onclick="currentSlide(1)" alt="extempore">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="images/max8.png" onclick="currentSlide(1)" alt="max8">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="images/puredata.jpeg" onclick="currentSlide(1)" alt="puredata">
+    </div>
+  </div>
+</div>
+  
   <!-- Contact List -->
     <section id="contact">
       <div id="information">
